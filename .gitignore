@@ -5,3 +5,5 @@ Shapes/x64/Debug/Shapes.obj
 Shapes/x64/
 x64/Debug/
 Shapes/Shapes.vcxproj.user
+ShapesLib/x64/
+*.user
