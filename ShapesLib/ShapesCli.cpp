@@ -26,6 +26,8 @@ int ShapesCli::Run()
 		string input;
 		if (cin >> input && input.length() == 1)
 		{
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			switch (input[0])
 			{
 				case 'C': case 'c':
@@ -40,6 +42,8 @@ int ShapesCli::Run()
 						cout << "Invalid choice.\n";
 						cout << "Please enter the radius of the outer circle.\n";
 					}
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 					cout << "Please enter the radius of the inner circle.\n";
 					while (!(cin >> innerRadius))
 					{
@@ -48,6 +52,8 @@ int ShapesCli::Run()
 						cout << "Invalid choice.\n";
 						cout << "Please enter the radius of the inner circle.\n";
 					}
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 					Circle outerCircle = Circle(outerRadius);
 					Circle innerCircle = Circle(innerRadius);
@@ -69,6 +75,8 @@ int ShapesCli::Run()
 						cout << "Invalid choice.\n";
 						cout << "Please enter the length of a side of the outer triangle.\n";
 					}
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 					cout << "Please enter the length of a side of the inner triangle.\n";
 					while (!(cin >> innerSide))
 					{
@@ -77,6 +85,8 @@ int ShapesCli::Run()
 						cout << "Invalid choice.\n";
 						cout << "Please enter the length of a side of the inner triangle.\n";
 					}
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 					Triangle outerTriangle = Triangle(outerSide);
 					Triangle innerTriangle = Triangle(innerSide);
@@ -98,6 +108,8 @@ int ShapesCli::Run()
 						cout << "Invalid choice.\n";
 						cout << "Please enter the length of the outer rectangle.\n";
 					}
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 					cout << "Please enter the width of the outer rectangle.\n";
 					while (!(cin >> outerWidth))
 					{
@@ -106,6 +118,8 @@ int ShapesCli::Run()
 						cout << "Invalid choice.\n";
 						cout << "Please enter the width of the outer rectangle.\n";
 					}
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 					cout << "Please enter the length of the inner rectangle.\n";
 					while (!(cin >> innerLength))
 					{
@@ -114,6 +128,8 @@ int ShapesCli::Run()
 						cout << "Invalid choice.\n";
 						cout << "Please enter the length of the inner rectangle.\n";
 					}
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 					cout << "Please enter the width of the inner rectangle.\n";
 					while (!(cin >> innerWidth))
 					{
@@ -122,6 +138,8 @@ int ShapesCli::Run()
 						cout << "Invalid choice.\n";
 						cout << "Please enter the width of the inner rectangle.\n";
 					}
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 					Rectangle outerRectangle = Rectangle(outerLength, outerWidth);
 					Rectangle innerRectangle = Rectangle(innerLength, innerWidth);
@@ -136,9 +154,25 @@ int ShapesCli::Run()
 					double outerSide, innerSide;
 
 					cout << "Please enter the length of a side of the outer square.\n";
-					cin >> outerSide;
+					while (!(cin >> outerSide))
+					{
+						cin.clear();
+						cin.ignore(numeric_limits<streamsize>::max(), '\n');
+						cout << "Invalid choice.\n";
+						cout << "Please enter the length of the inner square.\n";
+					}
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 					cout << "Please enter the length of a side of the inner square.\n";
-					cin >> innerSide;
+					while (!(cin >> innerSide))
+					{
+						cin.clear();
+						cin.ignore(numeric_limits<streamsize>::max(), '\n');
+						cout << "Invalid choice.\n";
+						cout << "Please enter the length of the inner square.\n";
+					}
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 					Square outerSquare = Square(outerSide);
 					Square innerSquare = Square(innerSide);
@@ -153,9 +187,25 @@ int ShapesCli::Run()
 					double outerRadius, innerRadius;
 
 					cout << "Please enter the radius of the outer sphere.\n";
-					cin >> outerRadius;
+					while (!(cin >> outerRadius))
+					{
+						cin.clear();
+						cin.ignore(numeric_limits<streamsize>::max(), '\n');
+						cout << "Invalid choice.\n";
+						cout << "Please enter the radius of the inner sphere.\n";
+					}
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 					cout << "Please enter the radius of the inner sphere.\n";
-					cin >> innerRadius;
+					while (!(cin >> innerRadius))
+					{
+						cin.clear();
+						cin.ignore(numeric_limits<streamsize>::max(), '\n');
+						cout << "Invalid choice.\n";
+						cout << "Please enter the radius of the inner sphere.\n";
+					}
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 					Sphere outerSphere = Sphere(outerRadius);
 					Sphere innerSphere = Sphere(innerRadius);
@@ -172,8 +222,6 @@ int ShapesCli::Run()
 				break;
 				default:
 				{
-					cin.clear();
-					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 					cout << "Invalid choice.\n\n";
 				}
 			}
