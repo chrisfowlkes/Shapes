@@ -7,3 +7,4 @@ x64/Debug/
 Shapes/Shapes.vcxproj.user
 ShapesLib/x64/
 *.user
+Debug/
